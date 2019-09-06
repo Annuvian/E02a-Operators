@@ -162,7 +162,7 @@ def reverseList(l):
     '''
     Returns a list which is a mirror of l (each element is present in reverse order from l)
     '''
-    toReturn = [];
+    #toReturn = [];
     toReturn = l.reverse();
     return toReturn;
 
