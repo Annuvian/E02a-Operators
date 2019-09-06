@@ -1,4 +1,4 @@
-import utils, random
+import utils, random;
 
 
 def add(a1,a2):
@@ -162,8 +162,9 @@ def reverseList(l):
     '''
     Returns a list which is a mirror of l (each element is present in reverse order from l)
     '''
-    #toReturn = [];
-    toReturn = l.reverse();
+    toReturn = [];
+    toReturn = l;
+    l.reverse();
     return toReturn;
 
 def shuffleList(l):
@@ -171,15 +172,17 @@ def shuffleList(l):
     Returns a list which has all the elements of l in a random order
     '''
     toReturn = [];
-    toReturn = random.shuffle(l);
+    toReturn = l;
+    random.shuffle(l);
     return toReturn;
 
 def listUntil(a):
     '''
     Returns a list contains numbers from 0 to a
     '''
-    toReturn = []
-    # Put your code here
+    toReturn = [];
+    for x in range(a + 1):
+        toReturn.append(x);
     return toReturn
 
 
@@ -192,6 +195,8 @@ def main():
     utils.check_version((3,7))          # make sure we are running at least Python 3.7
     utils.clear()                       # clear the screen
 
+    listA = [1, 2, 3, 4, 5, 6];
+    print(listA.reverse());
     print("Adding some numbers")
     print(add(1,2))
     print(add(1,-2))
